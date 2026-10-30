@@ -1,0 +1,37 @@
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{minted}
+\usepackage{tempora}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{float}
+\usepackage{xcolor}
+
+\setminted{
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    linenos,
+    breaklines,
+    style=bw,
+    bgcolor=gray!15
+}
+
+\renewcommand\theFancyVerbLine{\small\arabic{FancyVerbLine}}
+
+\makeatletter
+\@addtoreset{listing}{section}
+\makeatother
+\renewcommand\thelisting{\thesection.\arabic{listing}}
+\captionsetup[listing]{name=Листинг, labelsep=endash,
+    justification=centering, font={small}, skip=\abovecaptionskip, position=below}
